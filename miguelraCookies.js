@@ -32,20 +32,5 @@ var miguelraCookies =
       document.head.appendChild(styleSheet);
     }
 
-    var request = new XMLHttpRequest();
-    request.open("GET", "https://www.geoplugin.net/json.gp", true);
-    request.onload = function () {
-      if (this.status >= 200 && this.status < 400) {
-        var data = JSON.parse(this.response);
-        if (data.geoplugin_continentCode === "EU") {
-          loadAlert();
-        }
-      } else {
-        loadAlert();
-      }
-    };
-    request.onerror = function () {
-      loadAlert();
-    };
-    request.send();
+    loadAlert();
   };
