@@ -33,7 +33,7 @@ var miguelraCookies =
     }
 
     var request = new XMLHttpRequest();
-    request.open("GET", "http://www.geoplugin.net/json.gp", true);
+    request.open("GET", "https://www.geoplugin.net/json.gp", true);
     request.onload = function () {
       if (this.status >= 200 && this.status < 400) {
         var data = JSON.parse(this.response);
